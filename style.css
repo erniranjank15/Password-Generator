@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right bottom, #ffa585, #45c5d8);
+  color: #fff;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.container {
+  border: 0.5px solid #fff;
+  border-radius: 10px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  box-shadow: 8px 8px 4px #909090;
+  max-width: 90vw;
+}
+
+.container h1 {
+  font-size: 1.4rem;
+  margin-block: 8px;
+  text-align: center;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.inputBox span {
+  position: absolute;
+  color: #000;
+  top: 16px;
+  right: 6px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.passBox {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 20px;
+  margin-block: 8px;
+  text-overflow: ellipsis;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 8px;
+  gap: 10px;
+}
+
+.row p,
+.row label {
+  flex-basis: 100%;
+  font-size: 16px;
+}
+
+.row input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.genBtn {
+  border: none;
+  outline: none;
+  background-color: #2c619e;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.genBtn:hover {
+  background-color: #0066ff;
+}
+
+/* Toast */
+#toast {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 9999;
+  opacity: 0.95;
+  font-size: 14px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+
+    .passBox {
+        font-size: 16px;
+    }
+
+    .row p, .row label {
+        font-size: 16px;
+    }
+
+    .genBtn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
